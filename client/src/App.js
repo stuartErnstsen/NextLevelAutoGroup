@@ -4,12 +4,14 @@ import './App.scss';
 import Header from './components/Header/Header';
 import Landing from './components/Landing/Landing';
 import Footer from './components/Footer/Footer';
+import StickyLeftGallery from './components/StickyLeftGallery/StickyLeftGallery'
 
 const App = props => {
   // const { test } = useContext(AppContext)
   return (
     <div className="App">
       <Header />
+      <StickyLeftGallery />
       <Landing />
       <Footer />
     </div>

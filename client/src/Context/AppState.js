@@ -1,14 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AppContext from './app-context';
 
 const AppState = (props) => {
+
+    const [scrollPos, setScrollPos] = useState(0)
+
+    const handleScroll = () => {
+        const pos = window.pageYOffset;
+        setScrollPos(pos);
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, { passive: true })
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
 
     const [test, setTest] = useState('TESTER_TESTER')
     return (
         <AppContext.Provider
             value={{
-                test,
-                setTest
+                scrollPos
             }}
         >
             {props.children}
