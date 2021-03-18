@@ -14,6 +14,9 @@ header {
     transition: height .5s;
     #logo-content-container {
         align-self: center;
+        display: flex;
+        height: 100%;
+        align-items: center;
         img {
             position: absolute;
             height: 100px;
@@ -25,6 +28,7 @@ header {
             position: relative;
             top: 2px;
             transition: all .5s;
+            margin-right: 10px;
             h1 {
                 height: 2.2rem;
                 color: #b9b9b9;
@@ -41,6 +45,23 @@ header {
                 word-spacing: 3px;
                 transform: scale(1, .7);
             }
+        }
+        .logo-contact {
+            height: 100%;
+            border-left: 1px solid white;
+            padding-left: 10px;
+            h3 {
+                height: 50%;
+                display: flex;
+                align-items: center;
+                font-size: 1.2rem;
+                svg {
+                    height: 1.5rem;
+                    width: 2rem;
+                    color: #66B244;
+                }
+            }
+            
         }
         
     }

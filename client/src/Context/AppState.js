@@ -17,7 +17,6 @@ const AppState = (props) => {
         }
     }, [])
 
-    const [test, setTest] = useState('TESTER_TESTER')
     return (
         <AppContext.Provider
             value={{
